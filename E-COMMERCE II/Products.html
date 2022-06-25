@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 16PX;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        #box {
+            margin: auto;
+            margin-top: 50px;
+            display: grid;
+            width: 80%;
+            height: auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(auto);
+            gap: 20px;
+
+        }
+
+        #box>div {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        }
+
+        img {
+            width: 100%;
+            height: 250PX;
+        }
+
+        #div2 {
+            margin: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            /* justify-content: center; */
+
+
+
+        }
+
+        #div2>button {
+            width: 80px;
+            margin-bottom: 10PX;
+            cursor: pointer;
+
+        }
+
+        h1 {
+            margin-left: 10PX;
+        }
+
+        #add {
+            border: 3px solid gray;
+            width: fit-content;
+        }
+
+        #add>a {
+            text-decoration: none;
+            background-color: teal;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="counter"> count:0</div>
+    <div id="add"><a href="/E-COMMERCE I/admin.html"> Click To Add More Products</a> </div>
+    <div id="box"></div>
+</body>
+
+</html>
+<script type="module">
+
+    import appendfunc from "/components/products.js"
+
+    let main = document.querySelector("#box")
+    let counter = document.querySelector("#counter")
+    appendfunc(main, counter)
+
+</script>
